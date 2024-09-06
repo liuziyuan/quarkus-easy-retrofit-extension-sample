@@ -16,6 +16,8 @@
         <quarkus.platform.version>3.14.1</quarkus.platform.version>
         <skipITs>true</skipITs>
         <surefire-plugin.version>3.3.1</surefire-plugin.version>
+        <retrofit.version>2.11.0</retrofit.version>
+        <retrofit.adapter.simple.body.version>1.0.0</retrofit.adapter.simple.body.version>
     </properties>
 
     <dependencyManagement>
@@ -64,6 +66,22 @@
             <groupId>io.github.liuziyuan</groupId>
             <artifactId>quarkus-easy-retrofit-extension-print</artifactId>
             <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.liuziyuan</groupId>
+            <artifactId>retrofit-adapter-simple-body</artifactId>
+            <version>${retrofit.adapter.simple.body.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-jackson</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>adapter-guava</artifactId>
+            <version>${retrofit.version}</version>
         </dependency>
     </dependencies>
 
