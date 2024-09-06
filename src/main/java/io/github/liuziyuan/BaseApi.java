@@ -8,10 +8,10 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-@RetrofitBuilder(baseUrl = "http://localhost:9100/", globalOverwriteRule = OverrideRule.GLOBAL_FIRST)
+@RetrofitBuilder(baseUrl = "http://localhost:8081/", globalOverwriteRule = OverrideRule.GLOBAL_FIRST)
 @PrintInfo
 public interface BaseApi {
 
-    @GET("backend/v1/hello/{message}")
-    Call<ResponseBody> hello(@Path("message") String message);
+    @GET("/api/hello")
+    Call<ResponseBody> hello();
 }

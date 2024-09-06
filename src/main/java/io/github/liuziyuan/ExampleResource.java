@@ -21,9 +21,8 @@ public class ExampleResource {
     BaseApi baseApi;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String hello() throws IOException {
-        String string = baseApi.hello("world").execute().toString();
-        return "Hello from Quarkus REST";
+        return baseApi.hello().execute().body().string();
     }
 }
