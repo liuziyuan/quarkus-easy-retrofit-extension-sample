@@ -4,6 +4,13 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
 
+
+### How to test it
+```shell
+curl http://localhost:8080/hello 
+```
+
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
@@ -69,8 +76,5 @@ Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
 
-### How to run it
-```shell
-curl http://localhost:8080/hello 
-```
+
 
