@@ -1,7 +1,7 @@
 package io.github.liuziyuan;
 
+import io.github.easyretrofit.adapter.simplebody.SimpleBodyCallAdapterFactory;
 import io.github.easyretrofit.core.builder.BaseCallAdapterFactoryBuilder;
-import io.github.liuziyuan.retrofit.adapter.simple.body.BodyCallAdapterFactory;
 import jakarta.enterprise.context.ApplicationScoped;
 import retrofit2.CallAdapter;
 
@@ -9,6 +9,6 @@ import retrofit2.CallAdapter;
 public class BodyCallAdapterFactoryBuilder extends BaseCallAdapterFactoryBuilder {
     @Override
     public CallAdapter.Factory buildCallAdapterFactory() {
-        return BodyCallAdapterFactory.create();
+        return SimpleBodyCallAdapterFactory.create();
     }
 }
